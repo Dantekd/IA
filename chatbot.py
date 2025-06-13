@@ -1,7 +1,7 @@
 import streamlit as st
 import groq
 
-modelos=['llama3-8b-8192','llama3-70b-8192']
+modelos=["llama3-8b-8192","llama3-70b-8192"]
 #configurar la pagina
 def configurar_pagina():
     st.set_page_config(page_title=" Bienvenidos a tu IA",page_icon="😋")#cambia el nombre de la ventana
@@ -12,7 +12,7 @@ def mostrar_sidebar():
     st.write(f"**ELEJISTE EL MODELO** : {modelo}")
     return modelo
 def crear_cliente_groq():
-    groq_api_key= st.secrets['GROQ_API_KEY']#Almacena la apikey de gorq
+    groq_api_key= st.secrets["GROQ_API_KEY"]#Almacena la apikey de gorq
     return groq.Groq(api_key=groq_api_key)
 #inicializar el estado de los mensajes.
 def inicializacion_estado_chat():
